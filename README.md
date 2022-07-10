@@ -48,3 +48,13 @@ Note: You can change `localhost` to `testnet` if you want to deploy on ICE's Arc
 ```
 npx hardhat test
 ```
+
+
+## App
+
+To run the dapp, open your terminal and insert this in:
+
+```
+npm install -g live-server
+live-server
+```
