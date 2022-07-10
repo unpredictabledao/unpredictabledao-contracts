@@ -1,5 +1,10 @@
-## unpredictabledao-contracts
-Unpredictable DAO's contracts
+<div align="center">
+	<br/>
+	<img src="./assets/logo.png"/>
+	<br/>
+	<div><b>A DAO of unbiased, unpredictable, on-chain randomness</b></div>
+	<br/>
+</div>
 
 ## Use Unpredictable DAO's random number generator in your contract
 
