@@ -35,17 +35,6 @@ contract Rice {
 
     // Submit a hash (also called "masked value") (phase 1)
     function submit(bytes32 maskedValue) public payable {
-        // Update current campaign if needed (finish phase 2).
-        if (block.number - campaignIndexes[currentCampaign] > 7) {
-            while (block.number - campaignIndexes[currentCampaign] > 7) {
-                currentCampaign += 1;
-            }
-    
-            if (currentCampaign != 0) {
-                currentCampaign -= 1;
-            }
-        }
-
         if (campaignIndexes[campaignIndexesLength] != block.number) {
             campaignIndexesLength += 1;
             campaignIndexes[campaignIndexesLength] = block.number;
