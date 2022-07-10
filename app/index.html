@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>App - UnpredictableDAO</title>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" href="./logo.png">
+</head>
+
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+
+<body>
+	<script>
+		function switchTemplate(selector) {
+			const templateSelectors = [
+				"#participation-template",
+				"#claim-template",
+				"#vote-template",
+				"#withdraw-template"
+			];
+
+			templateSelectors.forEach((_selector) => {
+				const el = document.querySelector(_selector);
+				
+				el.setAttribute("style", el.getAttribute("style") + "; display: none; ");
+			});
+
+			const el = document.querySelector(selector);
+				
+			el.setAttribute("style", el.getAttribute("style") + "; display: inherit; ");
+		}
+	</script>
+
+	<div id="nav" align="center" style="margin-top: 2%">
+		<button onclick="switchTemplate(`#participation-template`)" class="nav-item">
+			Participate
+		</button>
+		<button onclick="switchTemplate(`#claim-template`)" class="nav-item nav-item-left">
+			Reward
+		</button>
+		<button onclick="switchTemplate(`#vote-template`)" class="nav-item nav-item-left">
+			Voting
+		</button>
+		<button onclick="switchTemplate(`#withdraw-template`)" class="nav-item nav-item-left">
+			Withdraw
+		</button>
+	</div>
+
+	<div id="logo" align="center" style="margin-top: 2%">
+		<img id="logo-img" src="./logo.png">
+	</div>
+
+	<div id="app" align="center">
+		<div id="participation-template">
+			<br />
+			<br />
+			<br />
+	
+			<button id="participate-button">Participate!</button>
+	
+			<br />
+			<br />
+
+			<p style="color:white; font-size: 10px;">Note: 5 coins are required to participate. After clicking "Participate!", you need to confirm a transaction, then wait for the second transaction to reveal submission.</p>
+		</div>
+	
+		<div style="display: none;" id="claim-template">
+			<br />
+			<br />
+			<br />
+	
+			<input id="claim-index" type="text" placeholder="Campaign index"/>
+	
+			<button id="claim-button">Claim!</button>
+	
+			<br />
+			<br />
+			<br />
+		</div>
+	
+		<div style="display: none;" id="vote-template">
+			<br />
+			<br />
+			<br />
+	
+			<input id="vote-fee-index" type="text" placeholder="Fee to vote for"/>
+			<input id="vote-amount-index" type="text" placeholder="Amount of UGT to vote">
+	
+			<button id="vote-button">Vote!</button>
+	
+			<br />
+			<br />
+			<br />
+		</div>
+	
+		<div style="display: none;" id="withdraw-template">
+			<br />
+			<br />
+			<br />
+	
+			<input id="voted-fee-index" type="text" placeholder="Fee voted for"/>
+	
+			<button id="withdraw-button">Withdraw!</button>
+	
+			<br />
+			<br />
+			<br />
+		</div>
+	</div>
+
+	<script src="./config.js"></script>
+	<script src="./main.js"></script>
+</body>
+
+</html>
