@@ -37,7 +37,7 @@ npx hardhat compile
 npx hardhat run --network localhost scripts/deploy.js
 ```
 
-Note: You can change `localhost` to `testnet` if you want to deploy on ICE's Arctic Testnet.
+Note: You can change `localhost` to `testnet` if you want to deploy on ICE's Arctic Testnet, there are also options for Acala's Mandala testnet and Astar's Shibuya testnet using `acala` and `astar`.
 
 
 ## Test
