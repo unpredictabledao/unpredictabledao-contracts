@@ -8,8 +8,8 @@ window.ethereum.request({
         rpcUrls: ["https://arctic-rpc.icenetwork.io:9933/"],
         chainName: "Arctic Network",
         nativeCurrency: {
-            name: "ICY",
-            symbol: "ICY",
+            name: "ICZ",
+            symbol: "ICZ",
             decimals: 18
         },
         blockExplorerUrls: null
