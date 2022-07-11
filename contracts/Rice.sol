@@ -103,6 +103,8 @@ contract Rice {
 
         require(msg.value >= rngFee, "Not enough money to call contract."); // Caller must send rngFee to generate random number.
 
+        rewards[currentCampaign] += msg.value;
+
         emit GenerateNumber(randomNumber[campaignIndexes[currentCampaign]], currentCampaign);
 
         return randomNumber[campaignIndexes[currentCampaign]];
