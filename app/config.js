@@ -255,7 +255,7 @@ const config = {
       }
   ],
 
-  "riceContractAddress": "0x10EE9FcE3a260C1bcE3C2f0E98F1CF0F527a433b",
+  "riceContractAddress": "0x0B1439E68dB91031d6465dfD848567043250826A",
   "riceContractABI": [
     {
       "inputs": [
