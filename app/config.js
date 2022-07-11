@@ -1,5 +1,5 @@
 const config = {
-  "tokenContractAddress": "0xC2469d565A2DC77f4a496Ff5e3B25ED69Ea8AB6b",
+  "tokenContractAddress": "0x10EE9FcE3a260C1bcE3C2f0E98F1CF0F527a433b",
   "tokenContractABI": [
       {
         "inputs": [
