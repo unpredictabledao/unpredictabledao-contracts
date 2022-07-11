@@ -91,8 +91,14 @@ contract Rice {
     // Function to generate the random number
     function generateNumber() public payable returns (uint) {
         // Update current campaign if needed (finish phase 2).
-        if (campaignIndexesLength - currentCampaign > 7) {
-            currentCampaign = campaignIndexesLength - 7;
+        if (block.number - campaignIndexes[currentCampaign] > 7) {
+            while (block.number - campaignIndexes[currentCampaign] > 7) {
+                currentCampaign += 1;
+            }
+
+            if (currentCampaign != 0) {
+                currentCampaign -= 1;
+            }
         }
 
         require(msg.value >= rngFee, "Not enough money to call contract."); // Caller must send rngFee to generate random number.
