@@ -50,8 +50,6 @@ rice.on("Submit", async (campaignIndex, participant) => {
 
         // Reveal right after submission
         await rice.reveal(campaignIndex, realValue, dummyValue);
-
-        doneWithParticipation = true;
     }
 });
 
@@ -61,6 +59,8 @@ rice.on("Reveal", async (campaignIndex, participant) => {
 
         // Save joined campaign indexes.
         joinedCampaigns.push(BigInt(campaignIndex));
+        
+        doneWithParticipation = true;
     }
 });
 
